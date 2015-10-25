@@ -1,0 +1,18 @@
+#!/bin/bash
+# sample imagemagick lines to transform icons to have a blue haze
+# blucon256
+# bluecon creates a floating iamge va
+#? TEST [of rappleshot component]
+# by ray anthony 
+#
+#6-13-2015 note, add '-bc' prior to png so inplace already png file changes now result in a  new file to be safe
+while [ "$#" -gt 0 ]; do
+        picture="$1"
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+		#convert "$picture" \( +clone -background black -shadow 80x20+0+15 \) +swap -background transparent -layers merge +repage "${filename}_rappleshot.png"
+                convert "$picture" -background orange \( +clone -background lightblue -shadow 242x11+0+11 \) +swap -background transparent -layers merge -repage 256\!x256\! -resize 256\!x256\! "${filename}-bc.png"
+        shift
+done
+

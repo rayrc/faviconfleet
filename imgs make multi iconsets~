@@ -1,0 +1,15 @@
+#!/bin/bash
+#rewritten in less than ten minutes 6-12-2015 by ray anthony 
+#simple no transparency all common sizes i think plus apples, keeps name and extension adds _size in version in subfolder of same name
+#app name: img make multi iconsets
+while [ $# -gt 0 ]; do
+        picture=$1
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+mkdir -p "${PWD}/${filename}_allsizes"
+#for i in 16 22 24 32 48 64 128 200 256; do convert $picture -resize "$i"\!x"$i"\! "${filename}_${i}.${extension}";done;
+for i in 512 256 196 144 72 57 114 128 96 64 48 32 24 22 18 16 8;do convert "${picture}" -resize "${i}"\!x"${i}"\! "${PWD}/${filename}_allsizes/${filename}_${i}.${extension}";done
+        shift
+done
+
