@@ -1,0 +1,33 @@
+#!/bin/bash
+#rewritten in less than ten minutes 6-12-2015 by ray anthony
+#simple no transparency all common sizes i think plus apples, keeps name and extension adds _size in version in subfolder of same name
+#app name: img make multi iconsets
+while [ $# -gt 0 ]; do
+        picture=$1
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+mkdir -p "${PWD}/iconset_${filename}/${filename}_allsizes"
+mkdir -p "${PWD}/iconset_${filename}/images/touch/"
+#for i in 16 22 24 32 48 64 128 200 256; do convert $picture -resize "$i"\!x"$i"\! "${filename}_${i}.${extension}";done;
+#make 'em all
+for i in 512 256 196 192 144 72 57 114 128 96 64 48 32 24 22 18 16 8;do convert "${picture}" -resize "${i}"\!x"${i}"\! "${PWD}/iconset_${filename}/${filename}_allsizes/${filename}-${i}x${i}.${extension}";done
+#apple sucks
+for i in 144 72 57 114;do convert "${picture}" -resize "${i}"\!x"${i}"\! "${PWD}/iconset_${filename}/${filename}_allsizes/apple-touch-icon-${i}.${extension}";done
+#generic icon could use framing just two sizes
+for i in 192 256;do convert "${picture}" -resize "${i}"\!x"${i}"\! +raise 13 "${PWD}/iconset_${filename}/${filename}_allsizes/icon-${i}x${i}.${extension}";done
+#gravatar could use framing
+convert "${picture}" -resize 196\!x196\! +raise 13 "${PWD}/iconset_${filename}/${filename}_allsizes/gravatar.${extension}"
+#favicon 196 max fuck ie
+convert "${picture}" -resize 192\!x192\! +raise 13 "${PWD}/iconset_${filename}/${filename}_allsizes/favicon.ico"
+convert "${PWD}/iconset_${filename}/${filename}_allsizes/favicon.ico" "${PWD}/iconset_${filename}/${filename}_allsizes/favicon.ico"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/${filename}-192x192.png" "${PWD}/iconset_${filename}/images/touch/chrome-touch-icon-192x192.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/${filename}-192x192.png" "${PWD}/iconset_${filename}/images/touch/icon-hires.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/apple-touch-icon-144.png" "${PWD}/iconset_${filename}/images/touch/ms-touch-icon-144x144-precomposed.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/apple-touch-icon-144.png" "${PWD}/iconset_${filename}/images/touch/ms-tile-144.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/apple-touch-icon-144.png" "${PWD}/iconset_${filename}/apple-touch-icon-precomposed.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/apple-touch-icon-144.png" "${PWD}/iconset_${filename}/images/touch/apple-touch-icon.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/${filename}-128x128.png" "${PWD}/iconset_${filename}/images/touch/icon-128x128.png"
+cp "${PWD}/iconset_${filename}/${filename}_allsizes/${filename}-128x128.png" "${PWD}/iconset_${filename}/images/touch/icon-normal.png"
+        shift
+done

@@ -1,0 +1,10 @@
+#!/bin/bash
+while [ $# -gt 0 ]; do
+        picture=$1
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+		for i in 36 48 72 96 144 192; do convert $picture -resize "$i"\!x"$i"\! "${filename}_${i}.png";done;
+        shift
+done
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+# sample name changing test app for fixing egregious naming errors before other processing
+# rappleshot component
+# by ray anthony 
+while [ "$#" -gt 0 ]; do
+        picture="$1"
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+		cp "$picture" "${filename}.png"
+        shift
+done
+

@@ -1,0 +1,22 @@
+#!/bin/bash
+# script for image magick using nautilus scripts or just plain bash
+# like everything else it does not work in internet explorer
+# be IN the folder you are running this from or your files will end up somewhere you didnt want
+# this can overwrite anything with a conflicting name
+# all rights reserved, all liabilities waived and brushed aside with love
+# by ray anthony 12-02-2014
+
+set -e
+
+while [ $# -gt 0 ]; do
+        picture=$1
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+#DOUBLECHECK THIS SHIT
+		mkdir -p "${filename}_allsizes"
+                mkdir -p "${filename}_allsizes/${filename}"
+		for i in 16 32 36 48 64 72 90 96 128 144 256 192 512; do convert $picture -resize "$i"\!x"$i"\! "${filename_allsizes}/${filename}_${i}.png";done;
+		for i in 57 114 72 144 60 120 76 152; do convert $picture -resize "$i"\!x"$i"\! "${filename_allsizes}/${filename}/apple-touch-icon-${i}.png";done;
+        shift
+done

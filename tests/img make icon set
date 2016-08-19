@@ -1,0 +1,7 @@
+#!/bin/bash
+filename=$(basename "$1")
+extension="${filename##*.}"
+filename="${filename%.*}"
+for i in 16 18 22 24 32 48 64 72 92 96 115 128 144 196 256 512; do convert "$1" -resize ${i}\!x${i}\! -repage ${i}\!x${i}\! "${filename}_${i}.${extension}";done;
+
+

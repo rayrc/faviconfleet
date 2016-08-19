@@ -1,0 +1,11 @@
+#!/bin/bash
+#notworking
+while [ $# -gt 0 ]; do
+        picture=$1
+		filename=$(basename "$1")
+		extension="${filename##*.}"
+		filename="${filename%.*}"
+		#removed -alpha off -colors 256 -delete 0 -bordercolor white option ${filename}_
+		convert "$picture" -border 0 \( -clone 0 -resize 16x16 \) \( -clone 0 -resize 32x32 \) \( -clone 0 -resize 48x48 \) \( -clone 0 -resize 64x64 \) \( -clone 0 -resize 96x96 \) \( -clone 0 -resize 192x192 \) -delete 0 -alpha on -colors 65700000 "favicon.ico"
+        shift
+done
