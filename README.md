@@ -7,7 +7,9 @@ Designed to easily prepare a fleet of dimensioned favicon and startup icons for 
 $ faviconfleet myapp.png
 ```
 
-That simple, and you get: ![favicon fleet example output](https://raw.githubusercontent.com/rayrc/faviconfleet/master/faviconfleet.png)
+That simple.
+
+![favicon fleet example output](https://raw.githubusercontent.com/rayrc/faviconfleet/master/faviconfleet.png)
 
 The rest of the files are various tests that need to be placed in a sub folder to remove clutter as they are non-essential. The app is a bash script in file **'faviconfleet'**
 
