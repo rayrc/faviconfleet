@@ -24,14 +24,14 @@ Easy!
 ### SUMMARY
 script for creating a set of icons designed to meet sizing standards and naming conventions for the web manifest 11-2014
 
-> image magick using nautilus scripts or just plain bash
-> like everything else it does not work in internet explorer
+* image magick using nautilus scripts or just plain bash
+* like everything else it does not work in internet explorer
  
-> author: ray anthony 
-> author site: http://rayanthony.io
-> date: 12-02-2014
-> updated 12-9-2014
-> rewritten 8-16-2016 complete overhaul 
+* author: ray anthony 
+* author site: http://rayanthony.io
+* date: 12-02-2014
+* updated 12-9-2014
+* rewritten 8-16-2016 complete overhaul 
 
 ### INSTALL:
    copy script to /usr/bin/faviconfleet as root then,
@@ -54,9 +54,9 @@ script for creating a set of icons designed to meet sizing standards and naming 
 ```
 a tree with the aforementioned work should result for each item you enter on the command line, but be careful of your memory mangement though.
 
-> license: oneworldlicense "free forever, for everyone. Share, distribute, monetize, hack. Not allowed in courtrooms"
-> oneworldlicense.com
-> copyright 2014,2016 all rights reserved, all liabilities waived and brushed aside with love
+ license: oneworldlicense "free forever, for everyone. Share, distribute, monetize, hack. Not allowed in courtrooms"
+ oneworldlicense.com
+ copyright 2014,2016 all rights reserved, all liabilities waived and brushed aside with love
 
 > by @rayantony, @rayrc [rayanthony website](http://rayanthony.io/extensions/)
 
