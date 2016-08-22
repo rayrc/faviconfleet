@@ -1,6 +1,7 @@
 #!/bin/bash
 WEBMX=`date +"%s"`
-while [ $myfavi <> "" ]; do
+myfavisize=`expr length $myfavi`
+while [ $myfavisize -gt "4" ]; do
         picture=$myfavi
 		filename=$(basename "$myfavi")
 		extension="${filename##*.}"
@@ -65,5 +66,4 @@ echo -e ' "icons": {
         "192":"'/img/${filename}_192x192.png'",
         "256":"'/img/${filename}_256x256.png'"
    }' > "${filename}_allsizes/chromeext-manifest.json"
-shift
 done
