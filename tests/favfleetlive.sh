@@ -1,9 +1,9 @@
 #!/bin/bash
 WEBMX=`date +"%s"`
-printf "\n enter filename of the icon you want to build out including path if in different location ...\n"
-read cmdlinestr
-while [ $cmdlinestr -gt 0 ]; do
-        picture=$1
+printf "\n enter filename of the icon you want to build out including path if in different location ...\n";
+read cmdlinestr;
+while [ $@ -gt 0 ]; do
+        picture=$@
 		filename=$(basename "$1")
 		extension="${filename##*.}"
 		filename="${filename%.*}"
