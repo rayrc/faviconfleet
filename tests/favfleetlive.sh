@@ -1,10 +1,8 @@
 #!/bin/bash
 WEBMX=`date +"%s"`
-printf "\n enter filename of the icon you want to build out including path if in different location ...\n";
-read cmdlinestr;
-while [ $@ -gt 0 ]; do
-        picture=$@
-		filename=$(basename "$@")
+while [ $myfavi -gt 0 ]; do
+        picture=$myfavi
+		filename=$(basename "$myfavi")
 		extension="${filename##*.}"
 		filename="${filename%.*}"
                 mkdir -p "${filename}_allsizes/img"
