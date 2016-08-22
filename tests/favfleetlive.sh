@@ -4,7 +4,7 @@ printf "\n enter filename of the icon you want to build out including path if in
 read cmdlinestr;
 while [ $@ -gt 0 ]; do
         picture=$@
-		filename=$(basename "$1")
+		filename=$(basename "$@")
 		extension="${filename##*.}"
 		filename="${filename%.*}"
                 mkdir -p "${filename}_allsizes/img"
