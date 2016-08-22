@@ -1,6 +1,6 @@
 #!/bin/bash
 WEBMX=`date +"%s"`
-while [ $myfavi -neq '' ]; do
+while [ $myfavi <> "" ]; do
         picture=$myfavi
 		filename=$(basename "$myfavi")
 		extension="${filename##*.}"
