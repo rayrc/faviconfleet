@@ -31,8 +31,7 @@ Shell executed Bash script for automating creation of icon sets designed to meet
  copy script to /usr/bin/faviconfleet as root then,
  
 ```bash
-$ git clone http://github.com/rayrc/faviconfleet
-$ sudo chown root:root faviconfleet/faviconfleet && sudo chmod +x faviconfleet/faviconfleet && sudo cp -a faviconfleet/faviconfleet /usr/bin/.
+$ git clone http://github.com/rayrc/faviconfleet && cd faviconfleet;sudo chown root:root faviconfleet/faviconfleet && sudo chmod +x faviconfleet/faviconfleet && sudo cp -a faviconfleet/faviconfleet /usr/bin/faviconfleet
 ```
 
 >>note you can put the file elsewhere as long as it is in your executable paths
