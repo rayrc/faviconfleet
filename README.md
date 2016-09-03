@@ -88,7 +88,7 @@ Easy!
  license: oneworldlicense.com is a less litigious license, "free forever, for everyone. Share, distribute, monetize, hack. Not allowed in courtrooms"
  copyright 2014,2016 all rights reserved, all liabilities waived and brushed aside with love
 
-[![FaviconFleet](https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https://github.com/rayrc/faviconfleet/edit/master/README.md "FaviconFleet")](https://github.com/rayrc/faviconfleet/edit/master/ "FaviconFleet")
+[![FaviconFleet](https://chart.googleapis.com/chart?chs=512x512&cht=qr&data=https://github.com/rayrc/faviconfleet/blob/master/README.md "FaviconFleet")](https://github.com/rayrc/faviconfleet/blob/master/README.md "FaviconFleet")
 
 
-> by @rayantony, @rayrc [rayanthony website](http://rayanthony.io/extensions/)
+> by @rayantony, @rayrc [![rayanthony website](http://rayanthony.io/extensions/ "Ray Anthony Extension Site")](http://rayanthony.io/extensions/ "Ray Anthony Extension Site")
